@@ -12,116 +12,10 @@
                 
                 <p>38 vendidos</p>
                 <P>Descrição básica do produto</P>
-            </div>
-            <div class="item">
-                <div class="photo">
-                    <!-- <img src="../assets/px200.png" alt=""> -->
+                <div class="evaluation-content">
+                    <h4 id="evaluationIcon">&#9733;&#9733;&#9733;&#9733;&#9734;</h4>
+                    <p id="evaluationNumber"></p>
                 </div>
-                <div class="flex-price">
-                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
-                </div>
-                
-                <p>38 vendidos</p>
-                <P>Descrição básica do produto</P>
-            </div>
-            <div class="item">
-                <div class="photo">
-                    <!-- <img src="../assets/px200.png" alt=""> -->
-                </div>
-                <div class="flex-price">
-                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
-                </div>
-                
-                <p>38 vendidos</p>
-                <P>Descrição básica do produto</P>
-            </div>
-            <div class="item">
-                <div class="photo">
-                    <!-- <img src="../assets/px200.png" alt=""> -->
-                </div>
-                <div class="flex-price">
-                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
-                </div>
-                
-                <p>38 vendidos</p>
-                <P>Descrição básica do produto</P>
-            </div>
-            <div class="item">
-                <div class="photo">
-                    <!-- <img src="../assets/px200.png" alt=""> -->
-                </div>
-                <div class="flex-price">
-                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
-                </div>
-                
-                <p>38 vendidos</p>
-                <P>Descrição básica do produto</P>
-            </div>
-            <div class="item">
-                <div class="photo">
-                    <!-- <img src="../assets/px200.png" alt=""> -->
-                </div>
-                <div class="flex-price">
-                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
-                </div>
-                
-                <p>38 vendidos</p>
-                <P>Descrição básica do produto</P>
-            </div>
-            <div class="item">
-                <div class="photo">
-                    <!-- <img src="../assets/px200.png" alt=""> -->
-                </div>
-                <div class="flex-price">
-                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
-                </div>
-                
-                <p>38 vendidos</p>
-                <P>Descrição básica do produto</P>
-            </div>
-            <div class="item">
-                <div class="photo">
-                    <!-- <img src="../assets/px200.png" alt=""> -->
-                </div>
-                <div class="flex-price">
-                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
-                </div>
-                
-                <p>38 vendidos</p>
-                <P>Descrição básica do produto</P>
-            </div>
-            <div class="item">
-                <div class="photo">
-                    <!-- <img src="../assets/px200.png" alt=""> -->
-                </div>
-                <div class="flex-price">
-                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
-                </div>
-                
-                <p>38 vendidos</p>
-                <P>Descrição básica do produto</P>
-            </div>
-            <div class="item">
-                <div class="photo">
-                    <!-- <img src="../assets/px200.png" alt=""> -->
-                </div>
-                <div class="flex-price">
-                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
-                </div>
-                
-                <p>38 vendidos</p>
-                <P>Descrição básica do produto</P>
-            </div>
-            <div class="item">
-                <div class="photo">
-                    <!-- <img src="../assets/px200.png" alt=""> -->
-                </div>
-                <div class="flex-price">
-                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
-                </div>
-                
-                <p>38 vendidos</p>
-                <P>Descrição básica do produto</P>
             </div>
             <div class="item">
                 <div class="photo">
@@ -138,6 +32,172 @@
                     <p id="evaluationNumber"></p>
                 </div>
             </div>
+            <div class="item">
+                <div class="photo">
+                    <!-- <img src="../assets/px200.png" alt=""> -->
+                </div>
+                <div class="flex-price">
+                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
+                </div>
+                
+                <p>38 vendidos</p>
+                <P>Descrição básica do produto</P>
+                <div class="evaluation-content">
+                    <h4 id="evaluationIcon">&#9733;&#9733;&#9733;&#9733;&#9734;</h4>
+                    <p id="evaluationNumber"></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <!-- <img src="../assets/px200.png" alt=""> -->
+                </div>
+                <div class="flex-price">
+                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
+                </div>
+                
+                <p>38 vendidos</p>
+                <P>Descrição básica do produto</P>
+                <div class="evaluation-content">
+                    <h4 id="evaluationIcon">&#9733;&#9733;&#9733;&#9733;&#9734;</h4>
+                    <p id="evaluationNumber"></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <!-- <img src="../assets/px200.png" alt=""> -->
+                </div>
+                <div class="flex-price">
+                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
+                </div>
+                
+                <p>38 vendidos</p>
+                <P>Descrição básica do produto</P>
+                <div class="evaluation-content">
+                    <h4 id="evaluationIcon">&#9733;&#9733;&#9733;&#9733;&#9734;</h4>
+                    <p id="evaluationNumber"></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <!-- <img src="../assets/px200.png" alt=""> -->
+                </div>
+                <div class="flex-price">
+                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
+                </div>
+                
+                <p>38 vendidos</p>
+                <P>Descrição básica do produto</P>
+                <div class="evaluation-content">
+                    <h4 id="evaluationIcon">&#9733;&#9733;&#9733;&#9733;&#9734;</h4>
+                    <p id="evaluationNumber"></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <!-- <img src="../assets/px200.png" alt=""> -->
+                </div>
+                <div class="flex-price">
+                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
+                </div>
+                
+                <p>38 vendidos</p>
+                <P>Descrição básica do produto</P>
+                <div class="evaluation-content">
+                    <h4 id="evaluationIcon">&#9733;&#9733;&#9733;&#9733;&#9734;</h4>
+                    <p id="evaluationNumber"></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <!-- <img src="../assets/px200.png" alt=""> -->
+                </div>
+                <div class="flex-price">
+                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
+                </div>
+                
+                <p>38 vendidos</p>
+                <P>Descrição básica do produto</P>
+                <div class="evaluation-content">
+                    <h4 id="evaluationIcon">&#9733;&#9733;&#9733;&#9733;&#9734;</h4>
+                    <p id="evaluationNumber"></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <!-- <img src="../assets/px200.png" alt=""> -->
+                </div>
+                <div class="flex-price">
+                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
+                </div>
+                
+                <p>38 vendidos</p>
+                <P>Descrição básica do produto</P>
+                <div class="evaluation-content">
+                    <h4 id="evaluationIcon">&#9733;&#9733;&#9733;&#9733;&#9734;</h4>
+                    <p id="evaluationNumber"></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <!-- <img src="../assets/px200.png" alt=""> -->
+                </div>
+                <div class="flex-price">
+                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
+                </div>
+                
+                <p>38 vendidos</p>
+                <P>Descrição básica do produto</P>
+                <div class="evaluation-content">
+                    <h4 id="evaluationIcon">&#9733;&#9733;&#9733;&#9733;&#9734;</h4>
+                    <p id="evaluationNumber"></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <!-- <img src="../assets/px200.png" alt=""> -->
+                </div>
+                <div class="flex-price">
+                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
+                </div>
+                
+                <p>38 vendidos</p>
+                <P>Descrição básica do produto</P>
+                <div class="evaluation-content">
+                    <h4 id="evaluationIcon">&#9733;&#9733;&#9733;&#9733;&#9734;</h4>
+                    <p id="evaluationNumber"></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <!-- <img src="../assets/px200.png" alt=""> -->
+                </div>
+                <div class="flex-price">
+                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
+                </div>
+                
+                <p>38 vendidos</p>
+                <P>Descrição básica do produto</P>
+                <div class="evaluation-content">
+                    <h4 id="evaluationIcon">&#9733;&#9733;&#9733;&#9733;&#9734;</h4>
+                    <p id="evaluationNumber"></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <!-- <img src="../assets/px200.png" alt=""> -->
+                </div>
+                <div class="flex-price">
+                    <h4>R$</h4><h2>36</h2><h4>,07</h4>
+                </div>
+                
+                <p>38 vendidos</p>
+                <P>Descrição básica do produto</P>
+                <div class="evaluation-content">
+                    <h4 id="evaluationIcon">&#9733;&#9733;&#9733;&#9733;&#9734;</h4>
+                    <p id="evaluationNumber"></p>
+                </div>
+            </div>
+            
 
         </main>
     </div>
