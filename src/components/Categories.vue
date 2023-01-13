@@ -82,7 +82,7 @@ h3{
     margin: 0;
 }
 aside{
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(200, 200, 200, 0.1);
 }
 aside:hover{
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);

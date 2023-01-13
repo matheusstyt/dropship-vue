@@ -4,15 +4,16 @@
             <img id="logo" src="../assets/tools/logo.png" alt="logo">
         </div>
         <Search />
-        
+        <Profile />
      
     </header>
 </template>
 <script>
 import Search from './Search.vue'
+import Profile from './Profile.vue'
 export default {
     components:{
-        Search
+        Search, Profile
     }
     
 }
