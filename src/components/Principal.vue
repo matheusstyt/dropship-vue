@@ -33,12 +33,12 @@ export default {
     data(){
         return{
             products :[
-                {url: "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg", price:"40,50", sold:"57", description: "Descrição do produto 1", evaluation:"5", likes:"25" },
-                {url: "https://itpetblog.com.br/wp-content/uploads/2021/04/poderes-magicos-gatos.jpg", price:"490,50", sold:"232", description: "Descrição do produto 2", evaluation:"2", likes:"40" },
-                {url: "https://midias.agazeta.com.br/2021/04/12/produtos-para-gatos-472152-article.png", price:"700,00", sold:"100", description: "Descrição do produto 3", evaluation:"4.6", likes:"140" },
-                {url: "https://www.azpetshop.com.br/blog/wp-content/uploads/2021/03/quantos-anos-vive-um-gato.jpg", price:"240,60", sold:"68", description: "Descrição  do produto 4", evaluation:"3.7", likes:"45" },
-                {url: "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg", price:"40,50", sold:"57", description: "Descrição do produto 1", evaluation:"5", likes:"25" },
-                {url: "https://itpetblog.com.br/wp-content/uploads/2021/04/poderes-magicos-gatos.jpg", price:"490,50", sold:"232", description: "Descrição do produto 2", evaluation:"2", likes:"40" },
+                {url: "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg", price:"40,50", sold:"57", description: "Gato de buenas", evaluation:"5", likes:"345" },
+                {url: "https://itpetblog.com.br/wp-content/uploads/2021/04/poderes-magicos-gatos.jpg", price:"1.900.500,50", sold:"232", description: "Gato celestial", evaluation:"5", likes:"99999" },
+                {url: "https://midias.agazeta.com.br/2021/04/12/produtos-para-gatos-472152-article.png", price:"700,00", sold:"1000", description: "Gato anos 90", evaluation:"4.6", likes:"140" },
+                {url: "https://www.azpetshop.com.br/blog/wp-content/uploads/2021/03/quantos-anos-vive-um-gato.jpg", price:"240,60", sold:"68", description: "Gato filhote", evaluation:"3.7", likes:"895" },
+                {url: "https://www.bichosaudavel.com/wp-content/uploads/gato-obeso.jpg", price:"1.500,00", sold:"130", description: "Gato gordo", evaluation:"5", likes:"3000" },
+                {url: "http://2.bp.blogspot.com/-JoB8xpE6mDo/T2eh5MQiE2I/AAAAAAAABoc/OTPXDlJs_XM/s1600/1.JPG", price:"670,00", sold:"232", description: "Gato magro", evaluation:"3", likes:"500" },
                 {url: "https://midias.agazeta.com.br/2021/04/12/produtos-para-gatos-472152-article.png", price:"700,00", sold:"100", description: "Descrição do produto 3", evaluation:"4.6", likes:"140" },
                 {url: "https://www.azpetshop.com.br/blog/wp-content/uploads/2021/03/quantos-anos-vive-um-gato.jpg", price:"240,60", sold:"68", description: "Descrição  do produto 4", evaluation:"3.7", likes:"45" },
                 {url: "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg", price:"40,50", sold:"57", description: "Descrição do produto 1", evaluation:"5", likes:"25" },
