@@ -77,12 +77,20 @@ export default {
     },
 }
 </script>
-<style>
+<style lang="scss">
 h3{
     margin: 0;
 }
 aside{
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.0);
+}
+aside:hover{
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    transition: ease 1s;
+
+    .categories-css{
+        fill: rgb(33, 101, 204);
+    }
 }
 .categories-title-content{
     display: flex;
@@ -93,18 +101,21 @@ aside{
     padding: 1em;
 
 }
-.categories-container{
-
-}
-
-.categories-css{
-    fill: rgb(33, 101, 204)
-}
 .item-category{
     padding: 0.5em 1em;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+.item-category:hover{
+    background-color: rgba(141, 141, 141, 0.1);
+    transition: ease 0.1s;
+    .item-css-icon{
+        color: rgb(33, 101, 204);
+    }
+    p{
+        color: rgb(33, 101, 204);
+    }
 }
 .item-css-icon{
     width: 14px;

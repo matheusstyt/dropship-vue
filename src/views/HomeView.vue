@@ -4,7 +4,7 @@
         href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
         integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
         crossorigin="anonymous">
-        
+     <Header />   
     <Categories/>
     <Principal />
   
@@ -13,16 +13,15 @@
 
 <script>
 // @ is an alias to /src
+import Search from '@/components/Search.vue'
 import Principal from '@/components/Principal.vue'
 import Categories from '@/components/Categories.vue'
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
-library.add(faPhone);
+import Header from '@/components/Header.vue'
+
 export default {
   name: 'HomeView',
   components: {
-    Principal, Categories, FontAwesomeIcon
+    Principal, Categories, Header, Search
   }
 }
 </script>
