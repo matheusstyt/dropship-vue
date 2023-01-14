@@ -2,7 +2,7 @@
     <div class="search-container">
         <input type="search" name="search" id="search">
         <div class="glass-content">
-            <img src="../assets/tools/search-icon.svg" alt="">
+            <img src="@/assets/tools/search-icon.svg" alt="">
         </div>
         
     </div>

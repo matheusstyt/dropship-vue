@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="img-content">
-            <img id="logo" src="../assets/tools/logo.png" alt="logo">
+            <img id="logo" src="@/assets/tools/logo.png" alt="logo">
         </div>
         <Search />
         <Profile />
@@ -9,8 +9,8 @@
     </header>
 </template>
 <script>
-import Search from './Search.vue'
-import Profile from './Profile.vue'
+import Search from './Header/Search.vue'
+import Profile from './Header/Profile.vue'
 export default {
     components:{
         Search, Profile

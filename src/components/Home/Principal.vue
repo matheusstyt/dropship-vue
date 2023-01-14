@@ -63,6 +63,7 @@ h6, h4, h2, p{
 p{
     text-align: left;
     padding: 0.2em 0.5em;
+    cursor: pointer;
 }
 main{
     display: flex;
@@ -94,6 +95,7 @@ main{
     img{
         width: 100%;
         aspect-ratio: 1/1;
+        cursor: pointer;
     }
 }
 .flex-price{
@@ -101,10 +103,12 @@ main{
     display: flex;
     justify-content:flex-start;
     align-items: flex-end;
+    cursor: pointer;
     
 }
 .flex-price h2, .flex-price h4{
     color: rgb(165, 25, 25);
+    cursor: pointer;
 }
 
 
@@ -116,6 +120,7 @@ main{
     }
     #evaluationIcon{
         color: rgb(16, 85, 211);
+        cursor: pointer;
     }
 }
 .favorites-start{
@@ -124,12 +129,14 @@ main{
     justify-content: space-evenly;
     h4{
         color: rgb(212, 55, 69);
+        cursor: pointer;
     }
 }
 .stars-content{
     display: flex;
     #evaluationIcon, p{
         color: rgb(26, 82, 167);
+        cursor: pointer;
     }
    
 }

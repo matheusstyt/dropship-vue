@@ -13,9 +13,9 @@
 
 <script>
 // @ is an alias to /src
-import Search from '@/components/Search.vue'
-import Principal from '@/components/Principal.vue'
-import Categories from '@/components/Categories.vue'
+import Search from '@/components/Header/Search.vue'
+import Principal from '@/components/Home/Principal.vue'
+import Categories from '@/components/Home/Categories.vue'
 import Header from '@/components/Header.vue'
 
 export default {

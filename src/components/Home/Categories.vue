@@ -6,61 +6,61 @@
         </div>
         
         <div class="item-category">
-            <img class="item-css-icon" src="../assets/categories-icons/smartphone-icon.svg" alt="">
+            <img class="item-css-icon" src="@/assets/categories-icons/smartphone-icon.svg" alt="">
             <p>Telefonia e Celulares</p>
         </div>
         <div class="item-category">
-            <img class="item-css-icon" src="../assets/categories-icons/laptop-icon.svg" alt="">
+            <img class="item-css-icon" src="@/assets/categories-icons/laptop-icon.svg" alt="">
             <p>Laptops e Computadores</p>
         </div>
         <div class="item-category">
-            <img class="item-css-icon" src="../assets/categories-icons/wheel-icon.svg" alt="">
+            <img class="item-css-icon" src="@/assets/categories-icons/wheel-icon.svg" alt="">
             <p>Automóveis</p>
         </div>
         <div class="item-category">
-            <img class="item-css-icon" src="../assets/categories-icons/game-icon.svg" alt="">
+            <img class="item-css-icon" src="@/assets/categories-icons/game-icon.svg" alt="">
 
             <p>Eletrônicos</p>
         </div>
         <div class="item-category">
-            <img class="item-css-icon" src="../assets/categories-icons/toys-icon.svg" alt="">
+            <img class="item-css-icon" src="@/assets/categories-icons/toys-icon.svg" alt="">
             <p>Brinquedos e acessórios infantis</p>
         </div>
         <div class="item-category">
-            <img class="item-css-icon" src="../assets/categories-icons/tools-icon.svg" alt="">
+            <img class="item-css-icon" src="@/assets/categories-icons/tools-icon.svg" alt="">
             <p>Ferramentas e Untecílios</p>
         </div>
         <div class="item-category">
-            <img class="item-css-icon" src="../assets/categories-icons/watch-icon.svg" alt="">
+            <img class="item-css-icon" src="@/assets/categories-icons/watch-icon.svg" alt="">
             <p>Relógios e Joias</p>
         </div>
         <div class="item-category">
-            <img class="item-css-icon" src="../assets/categories-icons/skipping-icon.svg" alt="">
+            <img class="item-css-icon" src="@/assets/categories-icons/skipping-icon.svg" alt="">
             <p>Esportes e Fitness</p>
         </div>
         <div class="item-category">
-            <img class="item-css-icon" src="../assets/categories-icons/manage-icon.svg" alt="">
+            <img class="item-css-icon" src="@/assets/categories-icons/manage-icon.svg" alt="">
             <p>Indústria e Comércios</p>
         </div>
         <div class="item-category">
-            <img class="item-css-icon" src="../assets/categories-icons/fan-icon.svg" alt="">
+            <img class="item-css-icon" src="@/assets/categories-icons/fan-icon.svg" alt="">
             <p>Eletrodomésticos</p>
         </div>
         <div class="item-category">
-            <img class="item-css-icon" src="../assets/categories-icons/brick-icon.svg" alt="">
+            <img class="item-css-icon" src="@/assets/categories-icons/brick-icon.svg" alt="">
 
             <p>Construção Civil</p>
         </div>
         <div class="item-category">
-            <img class="item-css-icon" src="../assets/categories-icons/house-icon.svg" alt="">
+            <img class="item-css-icon" src="@/assets/categories-icons/house-icon.svg" alt="">
             <p>Casa e Lazer</p>
         </div>
         <div class="item-category">
-            <img class="item-css-icon" src="../assets/categories-icons/shoes-icon.svg" alt="">
+            <img class="item-css-icon" src="@/assets/categories-icons/shoes-icon.svg" alt="">
             <p>Calçados</p>
         </div>
         <div class="item-category">
-            <img class="item-css-icon" src="../assets/categories-icons/fragrance-icon.svg" alt="">
+            <img class="item-css-icon" src="@/assets/categories-icons/fragrance-icon.svg" alt="">
             <p>Perfumes</p>
         </div>
 
@@ -106,6 +106,7 @@ aside:hover{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    cursor: pointer;
 }
 .item-category:hover{
     background-color: rgba(141, 141, 141, 0.1);
