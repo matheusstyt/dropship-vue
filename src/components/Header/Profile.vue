@@ -28,8 +28,12 @@
         aspect-ratio: 1/1;
     }
 }
+.profile-text{
+    font-weight: 500;
+}
 .profile-text:hover{
     color: rgb(15, 69, 168);
+ 
     cursor: pointer;
 
 }

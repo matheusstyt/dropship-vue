@@ -1,31 +1,30 @@
 <template>
 <main>
-    <div v-for="(index) in products" key="index" class="item">
-        <div class="photo">
-            <img :src="index.url">
-        </div>
-        <div class="flex-price">
-            <h4>R$</h4><h2>{{index.price}}</h2><h4>,07</h4>
-        </div>
-        <p>{{index.sold}} vendidos</p>
-        <P>{{index.description}}</P>
-        <div class="evaluation-content">
-            <div class="favorites-start">
-                <div class="stars-content">
-                    <h4 id="evaluationIcon">&#9733;&#9733;&#9733;&#9733;&#9734;</h4>
-                     <p id="evaluationNumber">{{index.evaluation}}</p>
-                </div>
-                
-                <div class="likes-content">
-                    <h4 id="likes-icon">&#10084;</h4>
-                    <h4 id="likes-count">{{index.likes}}</h4>  
-                </div>
+    <ul class="list-product">
+        <li v-for="(index) in products" key="index" class="item" @click="getProduct(index)">
+            <div class="photo">
+                <img :src="index.url">
             </div>
-           
-        </div>
-    </div>
-  
-    
+            <div class="flex-price">
+                <h4>R$</h4><h2>{{index.price}}</h2><h4>,07</h4>
+            </div>
+            <p>{{index.sold}} vendidos</p>
+            <P>{{index.description}}</P>
+            <div class="evaluation-content">
+                <div class="favorites-start">
+                    <div class="stars-content">
+                        <h4 id="evaluationIcon">&#9733;&#9733;&#9733;&#9733;&#9734;</h4>
+                        <p id="evaluationNumber">{{index.evaluation}}</p>
+                    </div>
+                    
+                    <div class="likes-content">
+                        <h4 id="likes-icon">&#10084;</h4>
+                        <h4 id="likes-count">{{index.likes}}</h4>  
+                    </div>
+                </div>       
+            </div>
+        </li> 
+    </ul>
 </main>
 </template>
 <script>
@@ -51,6 +50,13 @@ export default {
                 {url: "https://www.azpetshop.com.br/blog/wp-content/uploads/2021/03/quantos-anos-vive-um-gato.jpg", price:"240,60", sold:"68", description: "Descrição  do produto 4", evaluation:"3.7", likes:"45" },
             ]
         }
+    },
+    methods:{
+        getProduct(data){
+            let dataJ = JSON.stringify(data)
+            
+            this.$router.replace({name:'products'});
+        }
     }
 }
 </script>
@@ -66,16 +72,17 @@ p{
     cursor: pointer;
 }
 main{
+    min-width: 17%;
+    max-width: 75%;
+}
+.list-product{
     display: flex;
     flex-flow: row wrap;
     gap: 0.7vmax;
     background-color: rgba(0,0,0, 0.0);
     justify-content: center;
     align-items: flex-start;
-    min-width: 17%;
-    max-width: 75%;
-    width: auto;
-
+    width: 100%;
 }
 .item{
     width: 230px;
@@ -83,19 +90,19 @@ main{
     border-radius: 0.6em;
     background-color: rgb(231, 231, 231);
     overflow: hidden;
-}
-.item .photo{
-    width: 100%;
-    aspect-ratio: 1/1;
-    //background-image: url(../assets/px200.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    margin-bottom: 1em;
-    img{
+    .photo{
         width: 100%;
         aspect-ratio: 1/1;
-        cursor: pointer;
+        //background-image: url(../assets/px200.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin-bottom: 1em;
+        img{
+            width: 100%;
+            aspect-ratio: 1/1;
+            cursor: pointer;
+        }
     }
 }
 .flex-price{
@@ -110,8 +117,6 @@ main{
     color: rgb(165, 25, 25);
     cursor: pointer;
 }
-
-
 .item:hover{    
     box-shadow: 0 0 10px rgba(0,0,0, 0.3);
     transition: ease 0.2s;
@@ -138,13 +143,14 @@ main{
         color: rgb(26, 82, 167);
         cursor: pointer;
     }
-   
 }
 .likes-content{
     display: flex;
     align-items:center;
     flex-flow: row;
     justify-content: space-between;
-
+}
+li:first-child{
+    background-color: rgb(243, 242, 187);
 }
 </style>

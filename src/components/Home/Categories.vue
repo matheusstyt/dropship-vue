@@ -5,65 +5,11 @@
             <h3>Categorias</h3>
         </div>
         
-        <div class="item-category">
-            <img class="item-css-icon" src="@/assets/categories-icons/smartphone-icon.svg" alt="">
-            <p>Telefonia e Celulares</p>
+        <div class="item-category" v-for="item in categories" :key="id">
+            <img class="item-css-icon" :src="item.src" alt="">
+            <p>{{item.name}}</p>
         </div>
-        <div class="item-category">
-            <img class="item-css-icon" src="@/assets/categories-icons/laptop-icon.svg" alt="">
-            <p>Laptops e Computadores</p>
-        </div>
-        <div class="item-category">
-            <img class="item-css-icon" src="@/assets/categories-icons/wheel-icon.svg" alt="">
-            <p>Automóveis</p>
-        </div>
-        <div class="item-category">
-            <img class="item-css-icon" src="@/assets/categories-icons/game-icon.svg" alt="">
-
-            <p>Eletrônicos</p>
-        </div>
-        <div class="item-category">
-            <img class="item-css-icon" src="@/assets/categories-icons/toys-icon.svg" alt="">
-            <p>Brinquedos e acessórios infantis</p>
-        </div>
-        <div class="item-category">
-            <img class="item-css-icon" src="@/assets/categories-icons/tools-icon.svg" alt="">
-            <p>Ferramentas e Untecílios</p>
-        </div>
-        <div class="item-category">
-            <img class="item-css-icon" src="@/assets/categories-icons/watch-icon.svg" alt="">
-            <p>Relógios e Joias</p>
-        </div>
-        <div class="item-category">
-            <img class="item-css-icon" src="@/assets/categories-icons/skipping-icon.svg" alt="">
-            <p>Esportes e Fitness</p>
-        </div>
-        <div class="item-category">
-            <img class="item-css-icon" src="@/assets/categories-icons/manage-icon.svg" alt="">
-            <p>Indústria e Comércios</p>
-        </div>
-        <div class="item-category">
-            <img class="item-css-icon" src="@/assets/categories-icons/fan-icon.svg" alt="">
-            <p>Eletrodomésticos</p>
-        </div>
-        <div class="item-category">
-            <img class="item-css-icon" src="@/assets/categories-icons/brick-icon.svg" alt="">
-
-            <p>Construção Civil</p>
-        </div>
-        <div class="item-category">
-            <img class="item-css-icon" src="@/assets/categories-icons/house-icon.svg" alt="">
-            <p>Casa e Lazer</p>
-        </div>
-        <div class="item-category">
-            <img class="item-css-icon" src="@/assets/categories-icons/shoes-icon.svg" alt="">
-            <p>Calçados</p>
-        </div>
-        <div class="item-category">
-            <img class="item-css-icon" src="@/assets/categories-icons/fragrance-icon.svg" alt="">
-            <p>Perfumes</p>
-        </div>
-
+ 
 
     </aside>
 
@@ -72,7 +18,23 @@
 export default {
     data() {
         return {
-            color :"blue"
+            color :"blue",
+            categories: [
+                {id: 1, name : 'Telefonia e Celulares', src: "@/assets/categories-icons/smartphone-icon.svg"},
+                {id: 2, name : 'Laptops e Computadores', src: "@/assets/categories-icons/laptop-icon.svg"},
+                {id: 3, name : 'Automóveis', src: "@/assets/categories-icons/smartphone-icon.svg"},
+                {id: 4, name : 'Eletrônicos', src: "@/assets/categories-icons/game-icon.svg"},
+                {id: 5, name : 'Brinquedos e acessórios infantis', src: "@/assets/categories-icons/toys-icon.svg"},
+                {id: 6, name : 'Ferramentas e Untecílios', src: "@/assets/categories-icons/tools-icon.svg"},
+                {id: 7, name : 'Relógios e Joias', src: "@/assets/categories-icons/watch-icon.svg"},
+                {id: 8, name : 'Esportes e Fitness', src: "@/assets/categories-icons/skipping-icon.svg"},
+                {id: 9, name : 'Indústria e Comércios', src: "@/assets/categories-icons/manage-icon.svg"},
+                {id: 10, name : 'Eletrodomésticos', src: "@/assets/categories-icons/fan-icon.svg"},
+                {id: 11, name : 'Construção Civil', src: "@/assets/categories-icons/brick-icon.svg"},
+                {id: 12, name : 'Casa e Lazer', src: "@/assets/categories-icons/house-icon.svg"},
+                {id: 13, name : 'Calçados', src: "@/assets/categories-icons/shoes-icon.svg"},
+                {id: 14, name : 'Perfumes', src: "@/assets/categories-icons/fragrance-icon.svg"},
+            ]
         }
     },
 }
@@ -101,6 +63,9 @@ aside:hover{
     padding: 1em;
 
 }
+.item-category:nth-child(2n){
+    background-color: rgb(233, 240, 247);
+}
 .item-category{
     padding: 0.5em 1em;
     display: flex;
@@ -118,6 +83,7 @@ aside:hover{
         color: rgb(33, 101, 204);
     }
 }
+
 .item-css-icon{
     width: 14px;
 }

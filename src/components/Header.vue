@@ -30,6 +30,9 @@ header{
     width: 100%;
     height: 60px;
 }
+header:hover{
+    background-color: rgb(234, 234, 236);
+}
 .img-content{
     height: 100%;
     aspect-ratio: 50/10;
