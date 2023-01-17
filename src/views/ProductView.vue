@@ -2,27 +2,42 @@
     <div>
         <Header/>
         <main class="container-product">
-            <section class="img-product">
-
-                <img class="main-photo" :src="mainImg" alt="">
-                <ul class="list-photo">
-                    <li @mouseover="firstImg = true" @mouseleave="firstImg = false"><img id="img1" crossorigin="anonymous" :src="dataImg[0].src" alt=""></li>
-                    <li @mouseover="secondImg = true" @mouseleave="secondImg = false"><img id="img2" crossorigin="anonymous" :src="dataImg[1].src" alt=""></li>
-                    <li @mouseover="thirdImg = true" @mouseleave="thirdImg = false"><img id="img3" crossorigin="anonymous" :src="dataImg[2].src" alt=""></li>
-                    <li @mouseover="fourthImg = true" @mouseleave="fourthImg = false"><img id="img4" crossorigin="anonymous" :src="dataImg[3].src" alt=""></li>
-               
-                    <li @mouseover="packImg = true" @mouseleave="packImg = false"><strong><span>+3</span></strong></li>
-                    <!-- <li><img src="https://i.ebayimg.com/images/g/atkAAOSwMl1japLw/s-l1600.png" alt=""></li>
-                    <li><img src="https://i.ebayimg.com/images/g/aBIAAOSwHEljapJ~/s-l1600.jpg" alt=""></li>
-                    <li><img src="https://i.ebayimg.com/images/g/bgEAAOSwhCxjapKA/s-l1600.jpg" alt=""></li>
-                    <li><img src="https://i.ebayimg.com/images/g/VGIAAOSws7ljapKB/s-l1600.jpg" alt=""></li>
-                    <li><img src="https://i.ebayimg.com/images/g/5I8AAOSwZk5japKD/s-l1600.jpg" alt=""></li> -->
-
-                </ul>
-            </section>
+            <Slide/>
             <section class="details-product">
-                <h1>Produto 1</h1>
+                <h1>Microsoft Xbox Series X 1TB Video Game Console - Black</h1>
+                <div class="evaculation-content-flex">
+                    <div class="evaculation-icon-content">&#9733;&#9733;&#9733;&#9733;&#9733;<strong class="evaculation-median-content">5.0</strong></div>
+                    <p class="evaculation-text-content">152 avaliações</p>
+                    <p class="sold-text-content">467 pedidos</p>
+                </div>
+                <hr>
+                <section class="price-container">
+                    <h3>R$ 3.214,88</h3>
+                    <h3 class="price-desc">R$ 4.314,88</h3>
+                    <div class="paymment-options-container">
+                        <h4>Opções de pagamentos disponíveis:</h4>
+                        <div class="paymment-options">
+                            <img src="@/assets/bags-paymment/pix-icon.svg" alt="">
+                            <img src="@/assets/bags-paymment/boleto-icon.svg" alt="">
+                            <img src="@/assets/bags-paymment/visa-icon.png" alt="">
+                            <img src="@/assets/bags-paymment/mc-icon.svg" alt="">
+                            <img src="@/assets/bags-paymment/elo-icon.png" alt="">
+                            <img src="@/assets/bags-paymment/amex-icon.svg" alt="">
 
+                        </div>
+                    </div>
+                    
+                </section>
+                <section class="ships-container">
+                    <h3>Frete Grátis</h3>
+                    <p>Origem : China </p>
+                    <p>Destino : Brasil</p>
+                    <p>Via : AliExpress Standard Shipping</p>
+                </section>
+                <section class="buy-container">
+                    <button>Ir á página de compras</button>
+                    <p id="like-set" @click="setlike()" @mouseover="firstImg = true" @mouseleave="firstImg" >&#9825;</p>
+                </section>
             </section>
             
         </main>
@@ -32,95 +47,24 @@
 </template>
 <script>
 import Header from '@/components/Header.vue'
+import Slide from '@/components/ProductPage/Slide.vue'
+import { decode } from 'punycode';
 export default {
     components: {
-        Header
+        Header, Slide
   },
     data(){
         return{
             data: null,
-            dataImg: [
-                {id:1, src:"https://i.ebayimg.com/images/g/eBMAAOSwcmRjaprI/s-l1600.png"},
-                {id:2, src:"https://i.ebayimg.com/images/g/h8oAAOSw5b5japKA/s-l1600.jpg"},
-                {id:3, src:"https://i.ebayimg.com/images/g/RWoAAOSw1HxjapKB/s-l1600.jpg"},
-                {id:4, src:"https://i.ebayimg.com/images/g/SdAAAOSw1ExjapL~/s-l1600.png"},
-                {id:5, src:"https://i.ebayimg.com/images/g/atkAAOSwMl1japLw/s-l1600.png"},
-                {id:6, src:"https://i.ebayimg.com/images/g/atkAAOSwMl1japLw/s-l1600.png"},
-                {id:7, src:"https://i.ebayimg.com/images/g/bgEAAOSwhCxjapKA/s-l1600.jpg"},
-                {id:8, src:"https://i.ebayimg.com/images/g/bgEAAOSwhCxjapKA/s-l1600.jpg"},
-                {id:9, src:"https://i.ebayimg.com/images/g/VGIAAOSws7ljapKB/s-l1600.jpg"},
-                {id:10, src:"https://i.ebayimg.com/images/g/5I8AAOSwZk5japKD/s-l1600.jpg"},
-
-            ],
-            firstImg: true,
-            secondImg: false,
-            thirdImg: false,
-            fourthImg: false,
-            packImg: false,
-            mainImg: null
-
+            heart: ''
         }
     },
     methods:{
-        changeOpacity(img){
-            if(img === 0){
-                document.getElementById('img1').style.opacity = 1;
-                document.getElementById('img2').style.opacity = 0.6;
-                document.getElementById('img3').style.opacity = 0.6;
-                document.getElementById('img4').style.opacity = 0.6;
-            }else if(img === 1){
-                document.getElementById('img1').style.opacity = 0.6;
-                document.getElementById('img2').style.opacity = 1;
-                document.getElementById('img3').style.opacity = 0.6;
-                document.getElementById('img4').style.opacity = 0.6;
-            }else if(img === 2){
-                document.getElementById('img1').style.opacity = 0.6;
-                document.getElementById('img2').style.opacity = 0.6;
-                document.getElementById('img3').style.opacity = 1;
-                document.getElementById('img4').style.opacity = 0.6;
-            }else if(img === 3){
-                document.getElementById('img1').style.opacity = 0.6;
-                document.getElementById('img2').style.opacity = 0.6;
-                document.getElementById('img3').style.opacity = 0.6;
-                document.getElementById('img4').style.opacity = 1;
-            }
+        setlike(){
+            document.getElementById('like-set').textContent =  decode(&#10084);
         }
-    },
-    watch:{
-        firstImg(newValue){ 
-            if(newValue){
-                this.mainImg = this.dataImg[0].src
-                this.changeOpacity(0);
-            }
-    },
-        secondImg(newValue){ 
-            if(newValue){
-                this.mainImg = this.dataImg[1].src
-                this.changeOpacity(1);
-            }
-    },
-        thirdImg(newValue){ 
-            if(newValue){
-                this.mainImg = this.dataImg[2].src
-                this.changeOpacity(2);
-            }
-    },
-        fourthImg(newValue){ 
-            if(newValue){
-                this.mainImg = this.dataImg[3].src
-                this.changeOpacity(3);
-            }
-    },
-        packImg(newValue){ 
-
-            console.log('pack'+newValue); 
-    },
-    },
-    created(){
-        this.mainImg = this.dataImg[0].src
-     // this.data = this.$router.params.data
-        console.log(this.data);
     }
+
 }
 </script>
 <style lang="scss" scoped>
@@ -130,86 +74,91 @@ main{
     background-color: aqua;
     
 }
+h1{
+    text-align: left;
+    margin: 0;
+}
+.evaculation-content-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 1em;
+    .evaculation-icon-content{
+        padding: 0;
+        margin: 0;
+        color: rgb(16, 85, 211);
+        strong{
+            color:rgb(90, 90, 90);
+            padding: 0 0.3em;
+        }
+    }
+    .evaculation-text-content, .evaculation-median-content, .sold-text-content{
+        padding: 0;
+        margin: 0;
+    }
+
+}
 .container-product{
     display: flex;
     background-color: white;
     width: 97%;
     margin: 0 auto;
 }
-.img-product{
-    display: flex;
-    flex-flow: row wrap;
-    gap: 1em;
-    width: 45%;
-
-    aspect-ratio: 4/3;
-   // background-color: rgba(0, 0, 0,0.3);
-}
 .details-product{
     width: 50%;
+    padding: 0 2em;
     //background-color: rgba(0, 0, 0,0.5);
 }
-.main-photo{
-    width: 82%;
-    aspect-ratio: 1/1;
-    max-height: 100%;
-    cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    overflow: hidden;
+.price-container{
+    h3{
+        font-size: 3em;
+        text-align: left;
+
+    }
+    .price-desc{
+        text-decoration:line-through;
+        color: rgba(241, 2, 2, 0.459);
+        font-size: 2em;
+    }
 }
-.list-photo{
-    width: 14%;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+.paymment-options{
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 10px;
     display: flex;
     flex-flow: row wrap;
-    gap: 1em;
-    //overflow-y: scroll;
-    height: 100%;
-    border-bottom: 5px solid hsla(0,0%,100%,.5);
-    li{
-        overflow: hidden;
-        aspect-ratio: 1/1;
+    justify-content: space-around;
+    p{
+        background-color: antiquewhite;
     }
-    li:first-child{
-        background-color: transparent;
+    img{
+        height: 90px;
+       
     }
-    li img{
-        width: 90%;
-        aspect-ratio: 1/1;
-        opacity: 0.7;
-        //cursor: pointer;
-        //border: 1px solid rgba(0, 0, 0, 0.3);
-        //overflow: hidden;
+}
+.ships-container{
+    margin-top: 1em;
+    text-align: left;
+}
+.buy-container{
+    text-align: left;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    button{
+        background-color: rgb(243, 243, 243);
+        border-radius: 5px;
+        font-size: 1.2em;
+        padding: 0.3em;
+        font-family: 'Arial';
     }
-    li img:hover{
-        transition: ease 0.2s;
-        opacity: 1;
-        .main-photo{
-            src: v-bind('mainImg[2].src');
-        }
+    button:hover{
+        background-color: rgb(218, 232, 245);
     }
-    li{
-        width: 90%;
-        aspect-ratio: 1/1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border: 1px solid rgba(0, 0, 0, 0.3);
+    p{
+        font-size: 3em;
+        margin: 0;
+        padding: 0;
     }
-    li strong{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-    }
-    li strong:hover{
-        transition: ease 0.2s;
-        background-color: rgba(0, 0, 0, 0.1);
-        
-    }
+
 }
 </style>
