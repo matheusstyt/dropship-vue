@@ -44,6 +44,7 @@
             
         </main>
         <About/>
+        <Evaculation />
     </div>
     
 </template>
@@ -51,9 +52,10 @@
 import Header from '@/components/Header.vue'
 import Slide from '@/components/ProductPage/Slide.vue'
 import About from '@/components/ProductPage/About.vue'
+import Evaculation from '@/components/ProductPage/Evaculation.vue' 
 export default {
     components: {
-        Header, Slide, About 
+        Header, Slide, About, Evaculation
   },
     data(){
         return{
@@ -177,7 +179,10 @@ h1{
         background-color: rgb(70, 98, 224);
         box-shadow: 0px 0px 10px rgb(0 0 0 / 0.4);  
     }
-
+    button:active{
+        background-color: rgb(34, 64, 199);
+        box-shadow: 0px 0px 10px rgb(0 0 0 / 0.4);  
+    }
     p{
         font-size: 3em;
         @include reset();

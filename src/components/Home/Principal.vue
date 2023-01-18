@@ -85,15 +85,15 @@ main{
 .list-product{
     @include flex();
     gap: 0.7vmax;
-    background-color: rgba(0,0,0, 0.0);
+    
     width: 100%;
 }
 .item{
     width: 230px;
     height: 360px;
     border-radius: 0.6em;
-    background-color: rgb(231, 231, 231);
     overflow: hidden;
+    background-color: #fff;
     .photo{
         width: 100%;
         aspect-ratio: 1/1;

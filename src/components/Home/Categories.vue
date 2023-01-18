@@ -44,7 +44,7 @@ h3{
     margin: 0;
 }
 aside{
-    background-color: rgba(200, 200, 200, 0.1);
+    background-color: #fff;
 }
 aside:hover{
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
@@ -64,7 +64,7 @@ aside:hover{
 
 }
 .item-category:nth-child(2n){
-    background-color: rgb(233, 240, 247);
+    background-color: rgb(243, 243, 243);
 }
 .item-category{
     padding: 0.5em 1em;
