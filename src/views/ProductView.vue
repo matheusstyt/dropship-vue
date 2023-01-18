@@ -36,7 +36,9 @@
                 </section>
                 <section class="buy-container">
                     <button>Ir á página de compras</button>
-                    <p id="like-set" @click="setlike()" @mouseover="firstImg = true" @mouseleave="firstImg" >&#9825;</p>
+                    <svg class="heart-icon" @click="setlike()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 959.41 880.1">
+                        <path id="heart" d="M479.71,137.75C399.76-79.31,0-45.73,0,280.47c0,162.7,122.33,379,479.71,599.63,357.38-220.66,479.7-436.93,479.7-599.63C959.41-43.73,559.66-79.31,479.71,137.75Z" fill="#ed1c24"/></svg>
+                    <!-- <p id="like-set" @click="setlike()" @mouseover="firstImg = true" @mouseleave="firstImg" >&#9825;</p> -->
                 </section>
             </section>
             
@@ -56,18 +58,37 @@ export default {
     data(){
         return{
             data: null,
-            heart: ''
+            heart: '',
+            liked: false,
+            color_heart: '#0000'
         }
     },
     methods:{
         setlike(){
-            document.getElementById('like-set').textContent =  decode(&#10084);
+            if(this.liked){
+                document.getElementById('heart').style.fill = 'rgb(138, 138, 138)';
+                this.liked = !this.liked;
+            }else{
+                document.getElementById('heart').style.fill = 'rgb(238, 96, 96)';
+                this.liked = !this.liked;
+            }
         }
     }
 
 }
 </script>
 <style lang="scss" scoped>
+
+$color_heart :  rgb(138, 138, 138);
+$color_heart_hover : rgb(43, 43, 43);
+$color_heart_active : rgb(165, 50, 50);
+@mixin reset(){
+    padding: 0;
+    margin: 0;
+}
+@mixin flex(){
+    display: flex;
+}
 main{
     
     max-width: 100%;
@@ -84,8 +105,7 @@ h1{
     align-items: flex-end;
     gap: 1em;
     .evaculation-icon-content{
-        padding: 0;
-        margin: 0;
+        @include reset();
         color: rgb(16, 85, 211);
         strong{
             color:rgb(90, 90, 90);
@@ -93,8 +113,7 @@ h1{
         }
     }
     .evaculation-text-content, .evaculation-median-content, .sold-text-content{
-        padding: 0;
-        margin: 0;
+        @include reset();
     }
 
 }
@@ -102,7 +121,7 @@ h1{
     display: flex;
     background-color: white;
     width: 97%;
-    margin: 0 auto;
+    @include reset();
 }
 .details-product{
     width: 50%;
@@ -145,19 +164,37 @@ h1{
     display: flex;
     justify-content: space-evenly;
     button{
-        background-color: rgb(243, 243, 243);
-        border-radius: 5px;
+        background-color: rgb(88, 115, 238);
+        color: #fff;
+        border-radius: 3px;
         font-size: 1.2em;
         padding: 0.3em;
         font-family: 'Arial';
+        border: 2px solid rgba(0,0,0, 0.3);
+        
     }
     button:hover{
-        background-color: rgb(218, 232, 245);
+        background-color: rgb(70, 98, 224);
+        box-shadow: 0px 0px 10px rgb(0 0 0 / 0.4);  
     }
+
     p{
         font-size: 3em;
-        margin: 0;
-        padding: 0;
+        @include reset();
+    }
+    .heart-icon{
+        width: 2em;
+        path{
+            fill: $color_heart;     
+        }
+    }
+    .heart-icon:hover{
+        filter: drop-shadow(0px 0px 4px rgb(0 0 0 / 0.4));  
+        transition: ease 0.1s;
+    }
+    .heart-icon:active{
+        transform: scale(1.4);
+        transition: all 0.1s linear;
     }
 
 }

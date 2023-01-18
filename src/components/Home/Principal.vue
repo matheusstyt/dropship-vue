@@ -60,7 +60,14 @@ export default {
     }
 }
 </script>
+
 <style lang="scss">
+@mixin flex(){
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
 h6, h4, h2, p{
     color: rgb(65, 65, 65);
     margin: 0;
@@ -76,12 +83,9 @@ main{
     max-width: 75%;
 }
 .list-product{
-    display: flex;
-    flex-flow: row wrap;
+    @include flex();
     gap: 0.7vmax;
     background-color: rgba(0,0,0, 0.0);
-    justify-content: center;
-    align-items: flex-start;
     width: 100%;
 }
 .item{
@@ -93,7 +97,6 @@ main{
     .photo{
         width: 100%;
         aspect-ratio: 1/1;
-        //background-image: url(../assets/px200.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
@@ -107,9 +110,9 @@ main{
 }
 .flex-price{
     padding: 0 0.5em;
-    display: flex;
+    @include flex();
     justify-content:flex-start;
-    align-items: flex-end;
+    
     cursor: pointer;
     
 }
@@ -129,8 +132,7 @@ main{
     }
 }
 .favorites-start{
-    display: flex;
-    align-items: center;
+    @include flex();
     justify-content: space-evenly;
     h4{
         color: rgb(212, 55, 69);
@@ -145,9 +147,7 @@ main{
     }
 }
 .likes-content{
-    display: flex;
-    align-items:center;
-    flex-flow: row;
+    @include flex();
     justify-content: space-between;
 }
 li:first-child{

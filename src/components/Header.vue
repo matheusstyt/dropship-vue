@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="img-content">
-            <img id="logo" src="@/assets/tools/logo.png" alt="logo">
+            <img  id="logo" src="@/assets/tools/logo.png" alt="logo">
         </div>
         <Search />
         <Profile />
