@@ -14,8 +14,6 @@
     overflow: hidden;
     display: flex;
     flex-flow: row;
-   // justify-content: space-between;
-    
     border: 0px solid rgb(88, 115, 238);
     border-radius: 0px;
     #search[type="search"]{

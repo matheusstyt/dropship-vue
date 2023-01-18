@@ -43,17 +43,17 @@
             </section>
             
         </main>
-
+        <About/>
     </div>
     
 </template>
 <script>
 import Header from '@/components/Header.vue'
 import Slide from '@/components/ProductPage/Slide.vue'
-import { decode } from 'punycode';
+import About from '@/components/ProductPage/About.vue'
 export default {
     components: {
-        Header, Slide
+        Header, Slide, About 
   },
     data(){
         return{
