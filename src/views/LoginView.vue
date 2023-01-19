@@ -1,12 +1,14 @@
 <template>
     <main class="main-login">
         <div class="back-content" @click="getReturn()"><img src="@/assets/tools/back-icon.svg" alt=""></div>
+        <div class="registro-content" @click="getSign()"><p>Não tem cadastro?</p></div>
+
         <div class="login-container">
             <div class="login-slide">
             <img src="@/assets/tools/atro-cat.png" alt="">
             </div>
             <div class="login-content">
-                <h2>LOGIN</h2>
+                <h2>Cadastrar</h2>
                 <div class="input-p">
                     <label for="login">Usuário</label>
                     <input spellcheck="false" type="text" autocomplete="off" placeholder="Usuário" name="login" id="login">
@@ -15,7 +17,7 @@
                     <label for="password">Senha</label>
                     <input spellcheck="false" type="password" autocomplete="off" placeholder="Senha" name="password" id="password">
                 </div>
-                <button id="btn-p">LOGIN</button>
+                <button id="btn-p">Cadastrar</button>
             </div>
         </div>
     </main>
@@ -80,6 +82,27 @@ input:-webkit-autofill{
     }
     .back-content:active{
         background-color: rgb(85, 73, 128);
+        
+    }
+    .registro-content{
+        background-color: $color_secundary;
+        position: absolute;
+        top: 3.5%;
+        right: 1%;
+        border-radius: 2em;
+        padding: 0.7em;
+        p{
+            color: #fff;
+            font-family: 'Consolas';
+        }
+    }
+    .registro-content:hover{
+        background-color: rgb(56, 48, 85);
+        box-shadow: 0px 0px 0.5em rgb(41, 41, 41);
+    }
+    .registro-content:active{
+        background-color: rgb(85, 73, 128);
+        
     }
     .login-container{
         display: flex;
@@ -87,7 +110,7 @@ input:-webkit-autofill{
         justify-content: space-evenly;
         background-color: $color_secundary;
         box-shadow: 0px 0px 1em rgb(32, 32, 32);
-        width: 70%;
+        width: 60%;
         height: 70%;
         padding: 5em;
         border-radius: 2em;
@@ -116,6 +139,7 @@ input:-webkit-autofill{
             .input-p{
                 margin: 0.4em;
                 label{
+                    font-family: 'Consolas';
                     color: antiquewhite;
                     display: block;
                     text-align: left;
@@ -131,7 +155,7 @@ input:-webkit-autofill{
                     border-radius: 1em;
                     height: 2.5em;
                     padding: 0.5em 1em;
-                    font-family: 'Arial';
+                    font-family: 'Consolas';
                 }
                 input:hover{
                     box-shadow: 0px 0px 2em rgb(98, 89, 148);
