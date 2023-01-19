@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="img-content">
-            <img  id="logo" src="@/assets/tools/logo.png" alt="logo">
+            <img id="logo" @click="getHome()" src="@/assets/tools/logo.png" alt="logo">  
         </div>
         <Search />
         <Profile />
@@ -14,11 +14,16 @@ import Profile from './Header/Profile.vue'
 export default {
     components:{
         Search, Profile
+    },
+    methods:{
+        getHome(){
+            window.location.href = '/';
+        }
     }
     
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 header{
     display: flex;
     justify-content: center;
@@ -39,6 +44,7 @@ header:hover{
     #logo{
         height: 100%;
         width: 100%;
+        cursor: pointer;
     }
 }
 

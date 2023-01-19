@@ -4,7 +4,7 @@
         <hr>
         <div class="flex">
             <div class="evaculation-median-container">
-                <strong id="value-median"><span>{{average}}</span></strong>
+                <strong id="value-median"><span>{{product_evaculation}}</span></strong>
                 <div class="icon-content flex">
                     <p>&#9733;</p>
                     <p>&#9733;</p>
@@ -12,7 +12,7 @@
                     <p>&#9733;</p>
                     <p>&#9733;</p>
                 </div>
-                <p id="total-evaculation">{{total}} avaliações do produto</p>
+                <p id="total-evaculation">{{product_average}} avaliações do produto</p>
             </div>
             <div  class="bar-evaculation-container">
                 <div v-for="(index) in totalAverage" id="bar-line" class="flex">
@@ -28,9 +28,7 @@
                     <p id="bar-number">{{index.value}}</p>
                     <div class="bar-content">
                         <p id="text-percent">{{index.percent}}%</p>
-                        <div id="bar-width">
-    
-                        </div>
+                        <div id="bar-width" :style="{ width : index.percent+'%'}"></div>
                     </div>
                     <p id="total-line">{{index.average}}</p>
                 </div>
@@ -41,48 +39,28 @@
 </template>
 <script>
 export default {
+    props:{
+        totalAverage : Object,
+        product_average : Number,
+        product_evaculation : Number
+
+    },
     data(){
         return{
-            average: 0,
-            total: 0,
-            
-            totalAverage:[
-                {value: 1, average: 45, percent: 0},
-                {value: 2, average: 1, percent: 0},
-                {value: 3, average: 21, percent: 0},
-                {value: 4, average: 80, percent: 0},
-                {value: 5, average: 1997, percent: 0}
-            ]
+
         }
     },
     created(){
-        // this.data.forEach(element => {
-        //     this.total = this.total+element.total;
-        // });
-            this.averageFunction();
+
     },
     methods:{
-        averageFunction(){
-            let x = 0;
-            let p = 0;
-            this.totalAverage.forEach(element => {
-                x = x + element.value*element.average;
-                p = p + element.average;
-                element.percent = element.average
-            });
-            this.total = p
-             this.totalAverage.forEach(element => {
-                var x = (element.average/p)*100
-                element.percent = x.toFixed(1);
-            });
-            console.log(this.totalAverage)
-            let average = x/p;
-            this.average = average.toFixed(1);
-        }
+
     }
 }
 </script>
 <style lang="scss" scoped>
+
+
 .block-evaculation{
     border: 1px solid rgba(0,0,0 ,0.4);
     border-radius: 10px;

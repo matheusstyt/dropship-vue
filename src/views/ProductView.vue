@@ -4,16 +4,16 @@
         <main class="container-product">
             <Slide/>
             <section class="details-product">
-                <h1>Microsoft Xbox Series X 1TB Video Game Console - Black</h1>
+                <h1>{{product_name}}</h1>
                 <div class="evaculation-content-flex">
-                    <div class="evaculation-icon-content">&#9733;&#9733;&#9733;&#9733;&#9733;<strong class="evaculation-median-content">5.0</strong></div>
-                    <p class="evaculation-text-content">152 avaliações</p>
-                    <p class="sold-text-content">467 pedidos</p>
+                    <div class="evaculation-icon-content">&#9733;&#9733;&#9733;&#9733;&#9733;<strong class="evaculation-median-content">{{average}}</strong></div>
+                    <p class="evaculation-text-content">{{product_average}} avaliações</p>
+                    <p class="sold-text-content">{{product_sold}} pedidos</p>
                 </div>
                 <hr>
                 <section class="price-container">
-                    <h3>R$ 3.214,88</h3>
-                    <h3 class="price-desc">R$ 4.314,88</h3>
+                    <h3>R$ {{product_price_n}}</h3>
+                    <h3 class="price-desc">R$ {{product_price_des}}</h3>
                     <div class="paymment-options-container">
                         <h4>Opções de pagamentos disponíveis:</h4>
                         <div class="paymment-options">
@@ -30,9 +30,9 @@
                 </section>
                 <section class="ships-container">
                     <h3>Frete Grátis</h3>
-                    <p>Origem : China </p>
-                    <p>Destino : Brasil</p>
-                    <p>Via : AliExpress Standard Shipping</p>
+                    <p>Origem : {{product_origin}} </p>
+                    <p>Destino : {{product_destiny}}</p>
+                    <p>Via : {{product_shipping}}</p>
                 </section>
                 <section class="buy-container">
                     <button>Ir á página de compras</button>
@@ -44,7 +44,7 @@
             
         </main>
         <About/>
-        <Evaculation />
+        <Evaculation  :totalAverage="totalAverage" :product_evaculation="product_evaculation" :product_average="product_average"/>
     </div>
     
 </template>
@@ -60,12 +60,42 @@ export default {
     data(){
         return{
             data: null,
-            heart: '',
             liked: false,
-            color_heart: '#0000'
+            product_name: 'Microsoft Xbox Series X 1TB Video Game Console - Black',
+            product_price_n: '3.214,88',
+            product_price_des: '4.314,88',   
+            product_origin: 'China',
+            product_destiny: 'Brazil',
+            product_shipping: 'AliExpress Standard Shipping',
+            product_sold: '467',
+            product_average: 0,
+            product_evaculation : 0,
+            totalAverage:[
+                {value: 1, average: 45, percent: 0},
+                {value: 2, average: 1, percent: 0},
+                {value: 3, average: 21, percent: 0},
+                {value: 4, average: 80, percent: 0},
+                {value: 5, average: 1997, percent: 0}
+            ]
         }
     },
     methods:{
+        averageFunction(){
+            let x = 0;
+            let p = 0;
+            this.totalAverage.forEach(element => {
+                x = x + element.value*element.average;
+                p = p + element.average;
+                element.percent = element.average
+            });
+            this.product_average = p;
+             this.totalAverage.forEach(element => {
+                var x = (element.average/p)*100
+                element.percent = x.toFixed(1);
+            });
+            let average = x/p;
+            this.product_evaculation = average.toFixed(1);
+        },
         setlike(){
             if(this.liked){
                 document.getElementById('heart').style.fill = 'rgb(138, 138, 138)';
@@ -75,12 +105,17 @@ export default {
                 this.liked = !this.liked;
             }
         }
+    },
+    created(){
+        this.averageFunction();
     }
 
 }
 </script>
-<style lang="scss" scoped>
-
+<style lang="scss">
+body{ 
+    background-color: #fff;
+}
 $color_heart :  rgb(138, 138, 138);
 $color_heart_hover : rgb(43, 43, 43);
 $color_heart_active : rgb(165, 50, 50);
@@ -143,6 +178,7 @@ h1{
     }
 }
 .paymment-options{
+    padding: 0.5em 0.3em;
     border: 1px solid rgba(0,0,0,0.2);
     border-radius: 10px;
     display: flex;
