@@ -4,7 +4,8 @@
             <img src="@/assets/tools/cart-icon.svg" alt="card">
         </div>
         <h4 class="profile-text">Criar conta</h4>
-        <h4 class="profile-text">Entrar</h4>
+        <router-link to="user/login"><h4 class="profile-text">Entrar</h4></router-link>
+        
         <h4 class="profile-text">Curtidas</h4>
 
     </div>

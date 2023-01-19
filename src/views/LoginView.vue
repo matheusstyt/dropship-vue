@@ -1,26 +1,43 @@
 <template>
     <main class="main-login">
-        <div class="back-content"><img src="@/assets/tools/back-icon.svg" alt=""></div>
+        <div class="back-content" @click="getReturn()"><img src="@/assets/tools/back-icon.svg" alt=""></div>
         <div class="login-container">
             <div class="login-slide">
-
+            <img src="@/assets/tools/atro-cat.png" alt="">
             </div>
             <div class="login-content">
                 <h2>LOGIN</h2>
                 <div class="input-p">
                     <label for="login">Usuário</label>
-                    <input type="text" autocomplete="off" placeholder="Usuário" name="login" id="login">
+                    <input spellcheck="false" type="text" autocomplete="off" placeholder="Usuário" name="login" id="login">
                 </div>
                 <div class="input-p">
                     <label for="password">Senha</label>
-                    <input type="password" autocomplete="off" placeholder="Senha" name="password" id="password">
+                    <input spellcheck="false" type="password" autocomplete="off" placeholder="Senha" name="password" id="password">
                 </div>
                 <button id="btn-p">LOGIN</button>
             </div>
         </div>
     </main>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            
+        }
+    },
+    methods:{
+        getReturn(){
+            window.history.back()
+        }
+    }
+}
+</script>
 <style lang="scss">
+// green => rgb(56, 216, 122);
+$color_primary : rgb(229, 229, 236);
+$color_secundary : rgb(25, 18, 41);
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
@@ -42,12 +59,12 @@ input:-webkit-autofill{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(56, 216, 122);
+    background-color: $color_primary;
     .back-content{
         position: absolute;
         width: 4em;
         aspect-ratio: 6/3;
-        background-color: rgb(33, 24, 49);
+        background-color: $color_secundary;
         border-radius: 2em;
         padding: 0.5em;
         top: 3.5%;
@@ -59,7 +76,7 @@ input:-webkit-autofill{
     }
     .back-content:hover{
         background-color: rgb(56, 48, 85);
-        box-shadow: 0px 0px 1em rgb(3, 51, 13);
+        box-shadow: 0px 0px 0.5em rgb(41, 41, 41);
     }
     .back-content:active{
         background-color: rgb(85, 73, 128);
@@ -68,8 +85,8 @@ input:-webkit-autofill{
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        background-color: rgb(33, 24, 49);
-        box-shadow: 0px 0px 3em rgb(3, 51, 13);
+        background-color: $color_secundary;
+        box-shadow: 0px 0px 1em rgb(32, 32, 32);
         width: 70%;
         height: 70%;
         padding: 5em;
@@ -78,8 +95,11 @@ input:-webkit-autofill{
         .login-slide{
             width: 40%;
             height: 100%;
-            background-color: rgba(10, 3, 51, 0.2);
+            //background-color: rgba(10, 3, 51, 0.2);
             border-radius: 2em;
+            img{
+                width: 100%;
+            }
         }
         .login-content{
             width: 40%;
@@ -88,9 +108,10 @@ input:-webkit-autofill{
             background-color: rgba(255, 255, 255, 0.15);
             box-shadow: 0px 0px 3em rgba(10, 3, 51, 1);
             h2{
-                color: rgb(56, 216, 122);
+                color: $color_primary;
                 font-family: 'Consolas';
                 font-size: 2em;
+                text-shadow: 0px 0px 2em rgba(10, 3, 51, 1);
             }
             .input-p{
                 margin: 0.4em;
@@ -100,6 +121,7 @@ input:-webkit-autofill{
                     text-align: left;
                 }
                 input{
+                    
                     box-shadow: 0px 0px 2em rgba(10, 3, 51, 1);
                     background-color: rgba(255, 255, 255, 0.267);
                     border: none;
@@ -114,14 +136,16 @@ input:-webkit-autofill{
                 input:hover{
                     box-shadow: 0px 0px 2em rgb(98, 89, 148);
                 }
-                input:focus{
+                :focus{
                     border: none;
                     box-shadow: 0px 0px 2em rgb(98, 89, 148);
+                }
+                input::selection{
+                    background-color: rgb(171, 176, 230);
                 }
                 ::placeholder{
                     color: rgb(206, 206, 206);
                 }    
-           
             }
             #btn-p{
                 width: 100%;
@@ -132,12 +156,16 @@ input:-webkit-autofill{
                 border-radius: 1em;
                 border: none;
                 color: rgb(61, 61, 61);
-                background-color: rgb(56, 216, 122);
+                background-color: $color_primary;
                 box-shadow: 0px 0px 2em rgba(10, 3, 51, 1);
             }
             #btn-p:hover{
                 box-shadow: 0px 0px 2em rgb(98, 89, 148);
             }
+            #btn-p:active{
+                background-color: rgb(94, 231, 151);
+            }
+            
         }
     }
 
